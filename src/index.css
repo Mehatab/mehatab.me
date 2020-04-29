@@ -29,6 +29,7 @@ body[class='dark-mode'] {
 	--text-select-color: #fff;
 }
 
+
 ::-moz-selection {
 	background: var(--text-select-bg);
 	color: var(--text-select-color);
@@ -231,7 +232,7 @@ section h3 {
 }
 
 .about .details {
-	width: 60%;
+	width: 45%;
 	line-height: 1.9rem;
 	vertical-align: center;
 	margin: 0 auto;
@@ -386,4 +387,16 @@ section h3 {
 .hover-rotatefull:hover {
 	-webkit-animation-name: rotateFull;
 	animation-name: rotateFull;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+
+	.about .details {
+		width: 90%;
+		line-height: 1.9rem;
+		vertical-align: center;
+		margin: 0 auto;
+	}
+	
 }
