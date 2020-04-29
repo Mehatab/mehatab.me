@@ -1,9 +1,9 @@
 import React from 'react';
 import useDarkMode from 'use-dark-mode';
 
-import { config } from '../config';
-import Header from './Header';
-import { About } from './About';
+import { config } from './config';
+import Header from './components/Header';
+import { About } from './components/About';
 
 function App() {
   const darkMode = useDarkMode(true);
