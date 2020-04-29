@@ -4,6 +4,8 @@ import useDarkMode from 'use-dark-mode';
 import { config } from './config';
 import Header from './components/Header';
 import { About } from './components/About';
+import { Medium } from './components/Medium';
+import { Repository } from './components/Repository/';
 
 function App() {
   const darkMode = useDarkMode(true);
@@ -13,7 +15,8 @@ function App() {
     <div className="App">
       <Header {...config} darkMode={darkMode} />
       <About name={config.name} />
-      
+      {config.blog === 'Medium' && <Medium username={config.medium} />}
+	  <Repository />		
     </div>
   );
 }
