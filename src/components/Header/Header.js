@@ -18,9 +18,9 @@ const Header = ({ darkMode, github, twitter, stackoverflow, medium, instagram, d
 					<div className="avatar-center">
 						<img src={data.avatar_url} alt={data.name} className="avatar" />
 					</div>
-				<div className="flex">
+				<div >
 					
-					<div className="profile-desc">
+					<div className="profile-desc-center">
 						<h3>{data.name}</h3>
 						<p className="text-muted">
 							<i className="fa fa-map-marker-alt" /> {data.location}
@@ -91,7 +91,7 @@ const Header = ({ darkMode, github, twitter, stackoverflow, medium, instagram, d
 						</p>
 					</div>
 				</div>
-				<nav>
+				<nav className="profile-desc">
 					<a href="#about">About</a>
 					<a href="#blog">Blog</a>
 					<a href="#repository">Repository</a>				

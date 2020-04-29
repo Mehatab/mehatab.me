@@ -6,6 +6,8 @@ const Medium = ({ username }) => {
 		`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`
 	);
 
+	console.log(data)
+	
 	if (!data) return null;
 
 	return (
@@ -13,14 +15,23 @@ const Medium = ({ username }) => {
 			<h3>Blog</h3>
 			<div className="posts">
 				{data.items &&
-					data.items.map(post => (
+					data.items.map(post => (						
 						<div className="post" key={post.pubDate}>
-							<h5>
-								<a href={post.link} rel="noopener noreferrer" target="_BLANK">
-									{post.title}
-								</a>
-							</h5>
-							<p className="date">Published on {post.pubDate}</p>
+							<div className="flex"> 
+								<div>
+									<img src={post.thumbnail}  className="post-thumbnail" />
+								</div>
+								<div className="post-desc">
+									<h5>							
+										<a href={post.link} rel="noopener noreferrer" target="_BLANK">
+											{post.title}
+										</a>
+									</h5>
+
+									<p className="date">Published on {post.pubDate}</p>
+								</div>
+							</div>
+							
 						</div>
 					))}
 			</div>

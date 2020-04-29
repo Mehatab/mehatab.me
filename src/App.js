@@ -14,9 +14,10 @@ function App() {
   return (
     <div className="App">
       <Header {...config} darkMode={darkMode} />
-      <About name={config.name} />
-      {config.blog === 'Medium' && <Medium username={config.medium} />}
-	  <Repository />		
+      <About name={config.name} />      
+	  <Medium username={config.medium}/>
+    <Repository />		
+
     </div>
   );
 }
