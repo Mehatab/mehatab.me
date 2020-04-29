@@ -15,10 +15,11 @@ const Header = ({ darkMode, github, twitter, stackoverflow, medium, instagram, d
 				</span>
 			</div>
 			<div className="profile">
-				<div className="flex">
 					<div className="avatar-center">
 						<img src={data.avatar_url} alt={data.name} className="avatar" />
 					</div>
+				<div className="flex">
+					
 					<div className="profile-desc">
 						<h3>{data.name}</h3>
 						<p className="text-muted">
