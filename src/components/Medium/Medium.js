@@ -13,11 +13,11 @@ const Medium = ({ username }) => {
 	return (
 		<section className="blog" id="blog">
 			<h3>Blog</h3>
-			<div className="posts">
+			<div className="repos">
 				{data.items &&
 					data.items.map(post => (						
 						<div className="post" key={post.pubDate}>
-							<div className="flex"> 
+							
 								<div>
 									<img src={post.thumbnail}  className="post-thumbnail" />
 								</div>
@@ -30,7 +30,6 @@ const Medium = ({ username }) => {
 
 									<p className="date">Published on {post.pubDate}</p>
 								</div>
-							</div>
 							
 						</div>
 					))}
